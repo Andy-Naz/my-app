@@ -12,7 +12,7 @@ const CountersList = () => {
 
     const [counters, setCounters] = useState(initialState)
     const handleDelete = (id) => {
-        const newCounters = counters.filter((c) => c.id !== id)
+        const newCounters = counters.filter((counter) => counter.id !== id)
         setCounters(newCounters)
     }
     const handleReset = () => {
@@ -20,11 +20,17 @@ const CountersList = () => {
         console.log("reset")
     }
     const handleIncrement = (id) => {
-        const updateCounters = counters.map((c) => ({...c, value: c.id === id ? (c.value += 1) : c.value}))
+        const updateCounters = counters.map((counter) => ({
+            ...counter,
+            value: counter.id === id ? (counter.value += 1) : counter.value,
+        }))
         setCounters(updateCounters)
     }
     const handleDecrement = (id) => {
-        const updateCounters = counters.map((c) => ({...c, value: c.id === id ? (c.value -= 1) : c.value}))
+        const updateCounters = counters.map((counter) => ({
+            ...counter,
+            value: counter.id === id ? (counter.value -= 1) : counter.value,
+        }))
         setCounters(updateCounters)
     }
 
