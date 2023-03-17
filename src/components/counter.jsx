@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 
 const Counter = (props) => {
+    console.log(props)
     const { value } = props
 
     const formatValue = () => {

@@ -19,6 +19,9 @@ const CountersList = () => {
         setCounters(initialState)
         console.log("reset")
     }
+
+    //в счетчике отслеживается state легко
+    //с помощью кнопки reset приводим к изначальному
     const handleIncrement = (id) => {
         const updateCounters = counters.map((counter) => ({
             ...counter,
